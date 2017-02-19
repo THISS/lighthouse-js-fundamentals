@@ -16,17 +16,18 @@ var loopyLighthouse = function(range, multiples, words) {
   for(var i = range[0]; i < range[1]+1; i++) {
     // test against both multiples
     if (i % multiples[0] === 0 && i % multiples[1] === 0) {
-      console.log("LoopyLighthouse");
+      // concatenate the words array
+      console.log(words.join(""));
       // test agains 1st multiple
     }else if (i % multiples[0] === 0) {
-      console.log("Loopy");
+      console.log(words[0]);
       // test against 2nd multiple
     }else if (i % multiples[1] === 0) {
-      console.log("Lighthouse");
+      console.log(words[1]);
     }else {
       console.log(i);
     }
   }
 }
 // Added the multiples in the arguments to be called
-loopyLighthouse([1,50], [2,5]);
+loopyLighthouse([1,50], [2,5], ["num","counter"]);
