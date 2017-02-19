@@ -17,9 +17,11 @@ var loopyLighthouse = function(range, multiples, words) {
     // test against both multiples
     if (i % multiples[0] === 0 && i % multiples[1] === 0) {
       console.log("LoopyLighthouse");
-    }else if (i % 3 === 0) {
+      // test agains 1st multiple
+    }else if (i % multiples[0] === 0) {
       console.log("Loopy");
-    }else if (i % 4 === 0) {
+      // test against 2nd multiple
+    }else if (i % multiples[1] === 0) {
       console.log("Lighthouse");
     }else {
       console.log(i);
